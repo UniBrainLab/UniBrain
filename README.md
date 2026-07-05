@@ -50,7 +50,7 @@ python main.py
     + __enc_par__ :  parcellation network encoder filters numbers, default "[1,128,256,256,512,512]"
     + __dec_par__ :  parcellation network decoder filters numbers, default "[512,256,256,256,128,117]"
     + __feature_net_hidden__ :  feature extraction network hidden numbers, default "256"
-    + __feature_net_hidden__ :  feature extraction network output dimensions, default "128"
+    + __feature_dim__ :  feature extraction network output dimensions, default "128"
     + __gnn_hidden__ :  graph network hidden numbers, default "128"
     + __reg_loss_name__ :  training registration similarity loss function , default "GCC"
     + __ext_stage__ :  number of stages of extraction, default "1"
