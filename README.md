@@ -1,4 +1,4 @@
-# UniBrain
+# UniBrain: A Unified Model for End-to-End Brain Imaging Processing and Analysis
 
 Official implementation of UniBrain: A Unified Model for End-to-End Brain Imaging Processing and Analysis.
 This repository contains the implementation of UniBrain.
@@ -10,6 +10,7 @@ This repository contains the implementation of UniBrain.
 The problem of end-to-end brain imaging analysis. Given a set of raw images, each with its corresponding extraction mask and diagnosis label, along with a standard template brain image and its segmentation and parcellation labels, the goal is to train a model to perform brain extraction, registration, segmentation, parcellation, network generation and classification tasks simultaneously.
 ### Network Architecture
 ![unibrain_architecture](./fig/unibrain_architecture.png)
+
 An overview of the proposed UniBrain. <span style="color: rgb(181, 181, 181);">*Extraction (Ext)*</span> module removes non-brain tissue of the raw source image **S**, producing the extracted brain image **E**. <span style="color: rgb(251, 153, 140);">*Registration (Reg)*</span> module aligns extracted brain **E** with the target image **T** through affine transformation **A**, resulting in the warped image **W**. <span style="color: rgb(218, 175, 244);">*Segmentation & parcellation (Seg & Parc)*</span> module takes the source image **S**, target segmentation mask **B**, target parcellation mask **P**, and inversed affine transformation **A<sup>-1</sup>** to generate the segmentation mask **R** and the parcellation mask **U**. <span style="color: rgb(249, 203, 156);">*Brain network (BN)*</span> module uses the source image **S** and the parcellation mask **U** to construct brain network *G* by learning ROI feature **H** and connectivity matrix **C**. <span style="color: rgb(255, 127, 80);">*Classification (CLS)*</span> module then uses the ROI feature **H** and connectivity matrix **C** to produce the prediction **ŷ**. All modules are integrated to enable collective learning. UniBrain outputs include the extracted brain image **E**, the target-aligned warped image **W**, the source image's brain tissue segmentation mask **R**, the source image's brain ROI parcellation mask **U**, the brain network connectivity matrix **C** and the prediction **ŷ**.
 
 ## File listing
