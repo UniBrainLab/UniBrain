@@ -5,7 +5,7 @@ This repository contains the implementation of UniBrain.
 
 ### End-to-End Brain Imaging Analysis Problem
 
-![unibrain_problem](./fig/unibrain_problem.png)
+![unibrain_problem](./fig/new_main_fig.png)
 The problem of end-to-end brain imaging analysis. Given a set of raw images, each with its corresponding extraction mask and diagnosis label, along with a standard template brain image and its segmentation and parcellation labels, the goal is to train a model to perform brain extraction, registration, segmentation, parcellation, network generation and classification tasks simultaneously.
 ### Network Architecture
 ![unibrain_architecture](./fig/unibrain_architecture.png)
